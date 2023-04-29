@@ -34,5 +34,19 @@ let myUser: User = {
   email: "lili@l.com",
   isActive: true,
 };
+
+// mix and match of types (in context of creditcard)
+type cardNumber = {
+  cardnumber: string;
+};
+
+type cardDate = {
+  carddate: string;
+};
+
+type cardDetails = cardNumber &
+  cardDate & {
+    cvv: number;
+  };
 myUser.email = "hello@gmail.com";
 export {};

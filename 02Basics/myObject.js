@@ -14,4 +14,5 @@ var myUser = {
   email: "lili@l.com",
   isActive: true,
 };
+
 myUser.email = "hello@gmail.com";
