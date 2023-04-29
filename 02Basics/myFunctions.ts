@@ -1,7 +1,11 @@
-function addTwo(num: number) {
+function addTwo(num: number): number {
   return num + 2;
 }
 addTwo(5); //7
+// for the arrow function
+const getHello = (str: string): string => {
+  return "hello";
+};
 
 function getUpper(val: string) {
   return val.toUpperCase();
@@ -29,4 +33,24 @@ function singUpUser(
   isPaid: boolean
 ) {}
 singUpUser("abida", "abida@gmail.com", 2223, true);
+
+function getValue(myVal: number) {
+  if (myVal > 5) {
+    return true;
+  }
+  return "200 ok";
+}
+//array
+const heros = ["thor", "spiderman", "ironman"];
+heros.map((hero): string => {
+  return `hero is ${hero}`;
+});
+
+function consoleError(errMsg: string): void {
+  console.log(errMsg);
+}
+
+function handleError(errMsg: string): never {
+  throw new Error(errMsg);
+}
 export {};
