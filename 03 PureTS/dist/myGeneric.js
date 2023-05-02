@@ -16,4 +16,14 @@ function identityFour(val) {
     return val;
 }
 identityFour("hello");
-identityFour({});
+// identityFour<Bootle>({});
+function getSearchProducts(products) {
+    //do some database operation
+    const myIndex = 3;
+    return products[myIndex];
+}
+//arrow function
+const getSearchProducts2 = (products) => {
+    const myIndex = 3;
+    return products[4];
+};
