@@ -1,14 +1,31 @@
 class User {
-  email: string;
-  name: string;
-  city: string = "";
+  private _courseCount = 1;
+  readonly city: string = "korso";
 
-  constructor(email: string, name: string, city: string) {
-    this.email = email;
-    this.name = name;
-    this.city = city;
+  constructor(
+    public email: string,
+    public name: string,
+    private userId: string
+  ) {}
+
+  get getAppleEmail(): string {
+    return `apple ${this.email}`;
+  }
+
+  get courseCount(): number {
+    return this._courseCount;
+  }
+
+  set courseCount(courseNumber) {
+    if (courseNumber <= 1) {
+      throw new Error("Course count should be more than 1");
+    }
+    this._courseCount = courseNumber;
   }
 }
 
-const abida = new User("h@h.com", "abida", "korso");
-abida;
+class SubUser extends User {
+  isFamily: boolean = true;
+  changeCourseCount() {}
+}
+const abida = new User("h@h.com", "abida", "23");
