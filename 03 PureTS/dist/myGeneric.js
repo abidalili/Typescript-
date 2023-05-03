@@ -24,6 +24,20 @@ function getSearchProducts(products) {
 }
 //arrow function
 const getSearchProducts2 = (products) => {
-    const myIndex = 3;
-    return products[4];
+    const myIndex = 4;
+    return products[myIndex];
 };
+function anotherFunction(valOne, valTwo) {
+    return {
+        valOne,
+        valTwo,
+    };
+}
+class sellable {
+    constructor() {
+        this.cart = [];
+    }
+    addToCart(products) {
+        this.cart.push(products);
+    }
+}
